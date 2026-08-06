@@ -1,0 +1,13 @@
+.side{
+    display:block;
+    background-color: antiquewhite;
+    width:70%
+}
+.main{
+    background-color: aqua;
+        width:70%
+
+}
+.comp{
+    display: flex;
+}
