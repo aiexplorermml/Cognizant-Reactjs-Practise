@@ -8,7 +8,7 @@ const UseEffectAPi = () => {
             .then((data)=>setData(data))
         },[])
           const findUsers=data.filter((user)=>user.name.includes(search))
-
+            
     
   return (
     <div>

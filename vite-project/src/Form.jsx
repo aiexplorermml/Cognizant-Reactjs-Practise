@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [name, setName] = useState("");
@@ -19,7 +19,6 @@ function App() {
     <>
       <div>
         <h2>This is signup form</h2>
-        <p>{land}</p>
 
         <form onSubmit={SubmitData}>
             <label htmlfor="">Name: </label>

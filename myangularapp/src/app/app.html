@@ -1,0 +1,13 @@
+
+<app-header [message]="title()"/>
+<app-navbar/>
+<button (click)="handleClick()">Click me</button>
+<p>{{message}}</p>
+<button (click)="Inc()">Increment</button>
+<p>Count is {{count}}</p>
+<button (click)="Dec()">decrement</button>
+<p>Count is {{count1}}</p>
+<button (click)="handleterneary()">Ternery</button>
+<p>message is :{{intialState}}</p>
+<app-fetchdata/>
+<router-outlet />

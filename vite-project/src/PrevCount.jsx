@@ -3,7 +3,7 @@ import { ThemeContext } from './ThemeContext'
 
 const PrevCount = () => {
 
-  const {theme,toggleTheme}=useContext(ThemeContext) //theme contextt
+  const {theme,toggleTheme}=useContext(ThemeContext) 
     const[count,setCount]=useState(0)
     const prevCount=useRef([])
 

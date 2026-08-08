@@ -7,7 +7,13 @@ function App(){
     const[dark,setDark]=useState(false)
     const[like,setlike]=useState(false)
     const[type,setType]=useState("Even")
+    const[showword,setShowWord]=useState("")
+    const[text,setText]=useState([])
     
+    const addItem=()=>{
+        setText([...text,showword]);
+        setShowWord("")
+    }
     useEffect(()=>{
         if(count%2==0){
             setType("Even")
@@ -15,14 +21,18 @@ function App(){
             setType("Odd")
         }
     },[count])
+    
     return (
         <>
 
         <div>
             <p>count:{count}</p>
             <button onClick={()=>setCount((prev)=>prev+1)}>INC</button>
+            <button onClick={()=>setCount((prev)=>prev-1)}>DEc</button>
+            <button onClick={()=>setCount(0)}>Reset</button>
             <p>Types is :{type}</p>
         </div>
+
         <div style={{backgroundColor:dark?"black":"white",color:dark?"white":"Black"}}>
             <button onClick={()=>setDark(!dark)}>{dark?"black":"white"}</button>
        
@@ -34,11 +44,25 @@ function App(){
         <br></br>
        
         <input type={showpassword ?"text":"password" } value={password} onChange={(e)=>setPassword(e.target.value)} />
-        <button onClick={()=>setShowPassword(prev=>!prev)}>{showpassword?"Hide":"show"}</button>
+        <button onClick={()=>setShowPassword(!showpassword)}>{showpassword?"Hide":"show"}</button>
         <br/><br/>
         <input type="text" value={showtext} onChange={(e)=>setShowText(e.target.value)}></input>
         <p>{showtext}</p>
         <p>{showtext.length}</p>
+
+        
+        <input type="text" placeholder="enter" value={showword} onChange={(e)=>setShowWord(e.target.value)}>
+        </input>
+        <button onClick={addItem}>add</button>
+        {
+            text.map((answer,index)=>{
+                return (
+                    <>
+                <p key={index}>{answer}</p>
+                </>
+                )
+            })
+        }
         </div>
         
         </>

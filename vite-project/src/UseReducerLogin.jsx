@@ -25,6 +25,7 @@ const UseReducerLogin = () => {
         <label htmlFor=''>Password</label>
         <input type='password'></input>
         <button onClick={()=>dispatch({type:"Login"})}>{state.login?"logout":"login"}</button>
+        <p>{state.name}</p>
         
       
     </div>

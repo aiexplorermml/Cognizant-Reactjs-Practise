@@ -16,12 +16,20 @@ import UseReducer from './UseReducer'
 import UseReducerLogin from './UseReducerLogin'
 import UseSearch from './UseSearch'
 import Video from './Video'
+import Basic from './Basic'
+import Ref from './ref'
+import UseEffectAPi from './UseEffectAPi'
+import Clock  from './Clock'
+import  Form  from './Form'
+import Window from './Window'
+import Llogin from './Llogin'
+import Navbar from './Navbar'
+import Home from './Home'
+import Department from './Department'
 const App = () => {
   return (
     <div>
-      <>
-      <ProductList/>
-      </>
+      <Department/>
     </div>
   )
 }
